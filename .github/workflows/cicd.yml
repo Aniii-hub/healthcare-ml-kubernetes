@@ -43,11 +43,3 @@ jobs:
       run: |
         docker push anirudh967/healthcare-ml:latest
 
-    - name: Configure Kubernetes
-      run: |
-        mkdir -p $HOME/.kube
-        echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
-
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl rollout restart deployment healthcare-ml
