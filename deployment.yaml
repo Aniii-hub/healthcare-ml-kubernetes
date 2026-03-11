@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: healthcare-ml
-        image: healthcare-ml
-        imagePullPolicy: Never
+        image: anirudh967/healthcare-ml:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
